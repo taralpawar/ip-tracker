@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>IP Address Tracker</title>
+  </head>
+
+  <body>
+    <div class="upper m-upper">
+      <div class="title m-title">IP Address Tracker</div>
+      <div class="ipInput m-ipInput">
+        <input
+          type="text"
+          class="input m-input"
+          id="input"
+          placeholder="Search for any IP address or domain"
+        />
+        <button class="ipBtn" onclick="getAddress()">
+          <span><img src="./images/icon-arrow.svg" /></span>
+        </button>
+      </div>
+      <div class="display m-display">
+        <div class="data m-data">
+          <div class="dataTag m-dataTag">IP ADDRESS</div>
+          <div class="dataVal m-dataVal" id="ip"></div>
+        </div>
+        <div class="data m-data">
+          <div class="dataTag m-dataTag">LOCATION</div>
+          <div class="dataVal m-dataVal">
+            <span id="city"></span><span id="region"></span>
+          </div>
+        </div>
+        <div class="data m-data">
+          <div class="dataTag m-dataTag">TIMEZONE</div>
+          <div class="dataVal m-dataVal">UTC <span id="time"></span></div>
+        </div>
+        <div class="data1 m-data">
+          <div class="dataTag m-dataTag">ISP</div>
+          <div class="dataVal m-dataVal" id="isp"></div>
+        </div>
+      </div>
+    </div>
+    <div class="lower m-lower">
+      <div id="mapid"></div>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
